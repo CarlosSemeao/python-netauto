@@ -17,6 +17,7 @@ This repo contains small Python labs for network automation.
 
 ### Inventory run
 
+```text
 Processed 6 rows: 4 valid, 2 invalid
 Wrote data/output/valid_devices.csv
 Wrote data/output/invalid_devices.txt
