@@ -1,0 +1,50 @@
+name: python-tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Show Python version
+        run: python --version
+
+      - name: Run inventory processor
+        run: |
+          mkdir -p artifacts/ci
+          PYTHONPATH=src python -m netauto_training.inventory | tee artifacts/ci/run_inventory.txt
+
+      - name: Run summary processor
+        run: |
+          PYTHONPATH=src python -m netauto_training.inventory_summary | tee artifacts/ci/run_summary.txt
+
+      - name: Run unit tests
+        run: |
+          PYTHONPATH=src python -m unittest discover -s tests -p 'test_*.py' -v 2>&1 | tee artifacts/ci/test_results.txt
+
+      - name: Upload workflow artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: python-netauto-lab-output
+          path: |
+            artifacts/ci/run_inventory.txt
+            artifacts/ci/run_summary.txt
+            artifacts/ci/test_results.txt
+            data/output/valid_devices.csv
+            data/output/invalid_devices.txt
+            data/output/site_summary.json
+            data/output/backup_commands.txt
