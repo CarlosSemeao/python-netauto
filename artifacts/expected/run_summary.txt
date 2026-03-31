@@ -1,0 +1,3 @@
+Loaded 4 valid devices across 3 sites
+Wrote data/output/site_summary.json
+Wrote data/output/backup_commands.txt
