@@ -18,24 +18,21 @@ This repo contains small Python labs for network automation.
 
 
 ### Inventory run
-
-```text
+```
 Processed 6 rows: 4 valid, 2 invalid
 Wrote data/output/valid_devices.csv
 Wrote data/output/invalid_devices.txt
-```text
+```
 
 ### Summary run
-
-```text
+```
 Loaded 4 valid devices across 3 sites
 Wrote data/output/site_summary.json
 Wrote data/output/backup_commands.txt
-```text
+```
 
 ### Test run
-
-```text
+```
 test_process_inventory (test_inventory.TestInventoryProcessing.test_process_inventory) ... ok
 test_summary_and_backup_plan (test_inventory_summary.TestInventorySummary.test_summary_and_backup_plan) ... ok
 
@@ -43,4 +40,4 @@ test_summary_and_backup_plan (test_inventory_summary.TestInventorySummary.test_s
 Ran 2 tests in 0.001s
 
 OK
-```text
+```
