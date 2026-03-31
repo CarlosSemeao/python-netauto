@@ -1,0 +1,2 @@
+row 5: invalid ip '999.1.1.1' | {'hostname': 'bad-ip-1', 'ip_address': '999.1.1.1', 'role': 'router', 'site': 'london'}
+row 6: missing required field 'hostname' | {'hostname': '', 'ip_address': '10.0.2.5', 'role': 'switch', 'site': 'manchester'}

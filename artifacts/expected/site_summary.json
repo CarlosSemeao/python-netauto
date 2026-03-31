@@ -1,0 +1,31 @@
+{
+  "dublin": {
+    "device_count": 1,
+    "hostnames": [
+      "core-fw1"
+    ],
+    "roles": {
+      "firewall": 1
+    }
+  },
+  "london": {
+    "device_count": 2,
+    "hostnames": [
+      "edge-r1",
+      "edge-sw1"
+    ],
+    "roles": {
+      "router": 1,
+      "switch": 1
+    }
+  },
+  "manchester": {
+    "device_count": 1,
+    "hostnames": [
+      "dist-sw2"
+    ],
+    "roles": {
+      "switch": 1
+    }
+  }
+}

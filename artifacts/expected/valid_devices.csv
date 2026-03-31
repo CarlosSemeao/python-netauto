@@ -1,0 +1,5 @@
+hostname,ip_address,role,site
+edge-r1,10.0.0.1,router,london
+edge-sw1,10.0.0.10,switch,london
+core-fw1,10.0.1.254,firewall,dublin
+dist-sw2,10.0.3.20,switch,manchester

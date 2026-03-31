@@ -1,0 +1,4 @@
+ssh admin@10.0.1.254 "show running-config" > backups/dublin/core-fw1.cfg
+ssh admin@10.0.3.20 "show running-config" > backups/manchester/dist-sw2.cfg
+ssh admin@10.0.0.1 "show running-config" > backups/london/edge-r1.cfg
+ssh admin@10.0.0.10 "show running-config" > backups/london/edge-sw1.cfg
